@@ -15,14 +15,14 @@ import com.tcs.ventas.model.dto.VentaDTO;
 @RestController
 @RequestMapping("/venta")
 public class VentaController {
-   
+
 	private VentaBusiness ventaBusiness;
 	RedirectAttributes redirectAttributes;
+
 	public VentaController(VentaBusiness ventaBusiness) {
 		this.ventaBusiness = ventaBusiness;
 	}
-	 
- 
+
 	@GetMapping("/{id}")
 	public ApiResponseVenta getById(@PathVariable int id) {
 		ApiResponseVenta response = new ApiResponseVenta();
@@ -30,11 +30,7 @@ public class VentaController {
 		response.setSuccess(true);
 		response.setMessage("Ok");
 		response.setPayload(Base64.getEncoder().encodeToString(venta.toString().getBytes()));
-				
 		return response;
 	}
 
-	
-	
-	
 }

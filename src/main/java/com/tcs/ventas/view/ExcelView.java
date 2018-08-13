@@ -1,4 +1,4 @@
-package com.tcs.view;
+package com.tcs.ventas.view;
 
 import java.util.Map;
 

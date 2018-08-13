@@ -1,11 +1,11 @@
-package com.tcs.viewResolver;
+package com.tcs.ventas.viewResolver;
 
 import java.util.Locale;
 
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
 
-import com.tcs.view.ExcelView;
+import com.tcs.ventas.view.ExcelView;
 
 public class ExcelViewResolver implements ViewResolver {
 

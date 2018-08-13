@@ -37,7 +37,6 @@ public class ProductoController {
 		response.setPayload(list);
 		return response;
 	}
-	
 
 	@GetMapping("/producto/{codigoProducto}")
 	public ApiResponse<ProductoDTO> getById(@PathVariable int codigoProducto) {

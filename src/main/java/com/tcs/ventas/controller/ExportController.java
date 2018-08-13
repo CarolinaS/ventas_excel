@@ -11,19 +11,14 @@ import com.tcs.ventas.business.VentaBusiness;
 @Controller
 public class ExportController {
 
-    @Autowired
-    private VentaBusiness ventas;
+	@Autowired
+	private VentaBusiness ventas;
 
-    /**
-     * Handle request to download an Excel document
-     */
-    @GetMapping("venta/{id}/download")
-    public String download(Model model , @PathVariable Integer id) {
-    	
-        model.addAttribute("venta", ventas.findById(id));
-        return "";
-    }
-    
-    
+	@GetMapping("venta/{id}/download")
+	public String download(Model model, @PathVariable Integer id) {
+
+		model.addAttribute("venta", ventas.findById(id));
+		return "";
+	}
 
 }
